@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+html {
+  scroll-behavior: smooth;
+  color: #313131;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background: url("../assets/hero_portfolio.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  padding: 4em;
+  justify-content: center;
+}
+.hero .hero-text {
+  width: 80%;
+  color: white;
+}
+.hero .hero-text * {
+  margin-bottom: 0.4em;
+}
+.hero .hero-text .hero-pre-title {
+  font-weight: 300;
+  font-size: 1.75em;
+}
+.hero .hero-text .hero-title {
+  font-size: 2.75em;
+}
+.hero .hero-text .hero-description {
+  align-items: center;
+  font-weight: 500;
+  font-size: 2.75em;
+}
+.hero .hero-text .hero-description p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.hero .hero-text .hero-description b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+.hero .hero-text .hero-description .inner-text-box {
+  color: #F6B21B;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  /*animation*/
+  -webkit-animation: move 10s;
+  -moz-animation: move 10s;
+  -ms-animation: move 10s;
+  -o-animation: move 10s;
+  animation: move 10s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /*animation-delay*/
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.hero button {
+  margin-top: 1.25em;
+  width: 12em;
+  padding: 0.75em 0.75em;
+  border-radius: 2em;
+  border: none;
+  font-size: 1.4em;
+  font-weight: 700;
+  box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
+  background-color: #F6B21B;
+  cursor: pointer;
+}
+
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: -50px;
+  }
+  20% {
+    top: -100px;
+  }
+  30% {
+    top: -150px;
+  }
+  40% {
+    top: -200px;
+  }
+  50% {
+    top: -250px;
+  }
+  60% {
+    top: -300px;
+  }
+  70% {
+    top: -350px;
+  }
+  80% {
+    top: -400px;
+  }
+  90% {
+    top: -450px;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: -50px;
+  }
+  20% {
+    top: -100px;
+  }
+  30% {
+    top: -150px;
+  }
+  40% {
+    top: -200px;
+  }
+  50% {
+    top: -250px;
+  }
+  60% {
+    top: -300px;
+  }
+  70% {
+    top: -350px;
+  }
+  80% {
+    top: -400px;
+  }
+  90% {
+    top: -450px;
+  }
+}
+@-moz-keyframes move {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: -50px;
+  }
+  20% {
+    top: -100px;
+  }
+  30% {
+    top: -150px;
+  }
+  40% {
+    top: -200px;
+  }
+  50% {
+    top: -250px;
+  }
+  60% {
+    top: -300px;
+  }
+  70% {
+    top: -350px;
+  }
+  80% {
+    top: -400px;
+  }
+  90% {
+    top: -450px;
+  }
+}
+@-o-keyframes move {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: -50px;
+  }
+  20% {
+    top: -100px;
+  }
+  30% {
+    top: -150px;
+  }
+  40% {
+    top: -200px;
+  }
+  50% {
+    top: -250px;
+  }
+  60% {
+    top: -300px;
+  }
+  70% {
+    top: -350px;
+  }
+  80% {
+    top: -400px;
+  }
+  90% {
+    top: -450px;
+  }
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: -50px;
+  }
+  20% {
+    top: -100px;
+  }
+  30% {
+    top: -150px;
+  }
+  40% {
+    top: -200px;
+  }
+  50% {
+    top: -250px;
+  }
+  60% {
+    top: -300px;
+  }
+  70% {
+    top: -350px;
+  }
+  80% {
+    top: -400px;
+  }
+  90% {
+    top: -450px;
+  }
+}
+.contain-width {
+  max-width: 90em;
+  margin: auto;
+}
+
+.navbar {
+  padding: 2em 5em;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: transparent;
+}
+.navbar .contain-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.navbar .logo a {
+  color: white;
+}
+.navbar .logo span {
+  color: #F6B21B;
+}
+.navbar .navbar-menu ul {
+  list-style-type: none;
+}
+.navbar .navbar-menu ul li {
+  position: relative;
+  float: left;
+  margin-left: 1.4em;
+  font-size: 1.4em;
+}
+.navbar .navbar-menu ul li::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: inherit;
+  transition: all 350ms ease-in-out;
+  transform: scaleX(0);
+}
+.navbar .navbar-menu ul li:hover::after {
+  background: #F6B21B;
+  transform: scaleX(1);
+}
+.navbar .navbar-menu ul li a {
+  color: white;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */
