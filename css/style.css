@@ -341,5 +341,87 @@ section:nth-of-type(2n+3) {
     top: -450px;
   }
 }
+/* Beginning of the About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em;
+}
+.about .section-title {
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+.about .section-subtitle {
+  position: relative;
+  margin-top: 0.75em;
+  font-size: 1em;
+  font-style: italic;
+}
+.about .section-subtitle::before {
+  content: url(../assets/quot.png);
+  height: 20px;
+  font-size: 20px;
+  position: absolute;
+  left: -2.25em;
+  top: -0.75em;
+  transform: rotateZ(15deg) scale(0.35);
+}
+.about .section-subtitle::after {
+  content: url(../assets/quot.png);
+  height: 20px;
+  font-size: 20px;
+  position: absolute;
+  top: 0.65em;
+  right: -2.35em;
+  transform: rotateZ(190deg) scale(0.35);
+}
+.about .section-subtitle span {
+  float: right;
+  margin-top: 1em;
+  font-weight: 500;
+  margin-right: 0.75em;
+}
+.about .main-content {
+  padding: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.about .main-content .text {
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  font-size: 1.25em;
+  text-align: justify;
+  line-height: 1.5;
+}
+.about .main-content .text h2 {
+  margin: 0;
+}
+.about .main-content .text p {
+  margin-top: 0.5em;
+}
+.about .main-content .text button {
+  margin-top: 1.25em;
+  padding: 0.75em 1.75em;
+  border-radius: 5px;
+  border: 4px solid #F6B21B;
+  font-size: 1.2em;
+  font-weight: 700;
+  box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
+  background-color: #F6B21B;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.about .main-content .text button:hover {
+  background-color: transparent;
+  color: #F6B21B;
+}
+.about .main-content img {
+  width: 90%;
+}
 
 /*# sourceMappingURL=style.css.map */

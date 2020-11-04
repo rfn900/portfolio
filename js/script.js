@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     };
     const sectionOptions = {
      
-      rootMargin: "0px 0px 0px 0px",
+      rootMargin: "0px",
       threshold: 0.5
      
     };
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
           document.getElementById(`${entry.target.id}-link`).style.color = "#F6B21B";
         } else {
             document.getElementById(`${entry.target.id}-link`).style.color = "";
-
         }
       });
     },
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     sections.forEach(section =>{
         sectionObserver.observe(section);
     })
-
 
     const sectionOneObserver = new IntersectionObserver(function(
       entries,
@@ -47,13 +45,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             nav.classList.remove("scrolled");  
         
         } else {
-                nav.classList.add("scrolled");  
-    
+                nav.classList.add("scrolled");      
         }
       });
     },
     sectionOneOptions);
-    
     
     sectionOneObserver.observe(sectionOne);
     
