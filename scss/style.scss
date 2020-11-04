@@ -3,7 +3,8 @@
 $font-primary: 'Ubuntu', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
 $color-accent: #F6B21B;
-$text-color: #313131;
+$text-color: #161616;
+$off-white: #fafafa;
 
 html {
     scroll-behavior: smooth;
@@ -24,6 +25,10 @@ h1,h2,h3,h4,h5,h6 {
 
 section{
     height: 100vh;
+}
+
+section:nth-of-type(2n+3){
+    background: $off-white;
 }
 
 .hero{
@@ -194,7 +199,8 @@ section{
     width: 100%;
     top:0;
     background-color: transparent;
-    
+    transition: all 350ms ease-in-out;
+
     .contain-width{
         display: flex;
         justify-content: space-between;
@@ -250,6 +256,32 @@ section{
             }
         }
     }    
+}
+
+.scrolled {
+    padding: 1em 5em;
+    background-color: #ffffff;
+    z-index: 99999;
+    transition: all 350ms ease-in-out;
+    .logo {
+        a {
+            color: #161616;
+        }
+        span{
+            color: $text-color;
+        }
+    }
+    .navbar-menu{
+        
+        ul {
+            li{
+                a{
+                    color:$text-color
+                }
+            }
+        }
+    }
+
 }
 
 
