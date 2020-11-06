@@ -17,11 +17,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section:nth-of-type(2n+3) {
   background: #fafafa;
+}
+
+.section-title {
+  position: relative;
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+.section-title h2 {
+  position: relative;
+  z-index: 2;
+}
+.section-title::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 1.1em;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #FFDB5C;
 }
 
 .contain-width {
@@ -109,9 +129,10 @@ section:nth-of-type(2n+3) {
   background: url("../assets/hero_portfolio.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
   padding: 4em;
   justify-content: center;
+  height: 100vh;
+  max-height: 800px;
 }
 .hero .hero-text {
   width: 80%;
@@ -181,38 +202,6 @@ section:nth-of-type(2n+3) {
   cursor: pointer;
 }
 
-@keyframes move {
-  0% {
-    top: 0px;
-  }
-  10% {
-    top: -50px;
-  }
-  20% {
-    top: -100px;
-  }
-  30% {
-    top: -150px;
-  }
-  40% {
-    top: -200px;
-  }
-  50% {
-    top: -250px;
-  }
-  60% {
-    top: -300px;
-  }
-  70% {
-    top: -350px;
-  }
-  80% {
-    top: -400px;
-  }
-  90% {
-    top: -450px;
-  }
-}
 @-webkit-keyframes move {
   0% {
     top: 0px;
@@ -250,31 +239,31 @@ section:nth-of-type(2n+3) {
     top: 0px;
   }
   10% {
-    top: -50px;
+    top: -70px;
   }
   20% {
-    top: -100px;
+    top: -140px;
   }
   30% {
-    top: -150px;
+    top: -210px;
   }
   40% {
-    top: -200px;
+    top: -280px;
   }
   50% {
-    top: -250px;
-  }
-  60% {
-    top: -300px;
-  }
-  70% {
     top: -350px;
   }
+  60% {
+    top: -420px;
+  }
+  70% {
+    top: -490px;
+  }
   80% {
-    top: -400px;
+    top: -560px;
   }
   90% {
-    top: -450px;
+    top: -630px;
   }
 }
 @-o-keyframes move {
@@ -309,38 +298,11 @@ section:nth-of-type(2n+3) {
     top: -450px;
   }
 }
-@keyframes move {
-  0% {
-    top: 0px;
-  }
-  10% {
-    top: -50px;
-  }
-  20% {
-    top: -100px;
-  }
-  30% {
-    top: -150px;
-  }
-  40% {
-    top: -200px;
-  }
-  50% {
-    top: -250px;
-  }
-  60% {
-    top: -300px;
-  }
-  70% {
-    top: -350px;
-  }
-  80% {
-    top: -400px;
-  }
-  90% {
-    top: -450px;
-  }
+.active-menu-link {
+  color: #F6B21B !important;
+  transition: all 350ms ease-in-out !important;
 }
+
 /* Beginning of the About Section */
 .about {
   display: flex;
@@ -348,9 +310,16 @@ section:nth-of-type(2n+3) {
   align-items: center;
   padding: 4em;
 }
-.about .section-title {
-  margin-top: 2em;
-  font-size: 1.5em;
+.about .section-title::before {
+  content: "About Me";
+  position: absolute;
+  font-size: 10em;
+  line-height: 0.75em;
+  color: #f4f4f8;
+  opacity: 0.75;
+  z-index: -1;
+  top: -200%;
+  left: -40vw;
 }
 .about .section-subtitle {
   position: relative;
@@ -393,15 +362,17 @@ section:nth-of-type(2n+3) {
 .about .main-content .text {
   font-family: "Poppins", sans-serif;
   width: 50%;
-  font-size: 1.25em;
+  font-size: 1em;
   text-align: justify;
   line-height: 1.5;
 }
 .about .main-content .text h2 {
+  position: relative;
   margin: 0;
 }
 .about .main-content .text p {
   margin-top: 0.5em;
+  font-size: 1.25em;
 }
 .about .main-content .text button {
   margin-top: 1.25em;
@@ -412,7 +383,7 @@ section:nth-of-type(2n+3) {
   font-weight: 700;
   box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
   background-color: #F6B21B;
-  color: #ffffff;
+  color: #161616;
   cursor: pointer;
   transition: all 350ms ease-in-out;
 }
@@ -420,8 +391,46 @@ section:nth-of-type(2n+3) {
   background-color: transparent;
   color: #F6B21B;
 }
-.about .main-content img {
+.about .main-content .about-me-img {
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 100ms ease-out;
+}
+.about .main-content .about-me-img img {
+  position: relative;
   width: 90%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transform: rotateZ(5deg);
+}
+.about .main-content .about-me-img .card-icons {
+  position: absolute;
+  display: flex;
+  color: white;
+  transform: translateZ(60px) translate(5px, 130px) rotateZ(-2deg);
+}
+.about .main-content .about-me-img .card-icons i {
+  font-size: 3.75em;
+  padding: 0 10px;
+  transition: color 350ms ease-in-out;
+  cursor: pointer;
+}
+.about .main-content .about-me-img .card-icons i:hover {
+  color: #F6B21B;
+}
+.about .main-content .about-me-img .card-icons a {
+  color: white;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,13 +24,33 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 section{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 section:nth-of-type(2n+3){
     background: $off-white;
 }
 
+.section-title{
+    position: relative;
+    margin-top: 2em;
+    font-size: 1.5em;    
+
+    h2{
+        position: relative;
+        z-index: 2;
+    }
+    &::after {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        top: 1.1em;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background-color: #FFDB5C;
+    }
+}
 
 .contain-width{
     max-width: 90em;
@@ -140,10 +160,10 @@ section:nth-of-type(2n+3){
     background: url('../assets/hero_portfolio.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     padding: 4em;
     justify-content: center;
-    
+    height: 100vh;
+    max-height: 800px;
 
     .hero-text{
         
@@ -229,18 +249,18 @@ section:nth-of-type(2n+3){
 
 }
 
-@keyframes move{
-    0%  { top: 0px; }
-    10% { top: -50px; }
-    20% { top: -100px; }
-    30% { top: -150px; }
-    40% { top: -200px; }
-    50% { top: -250px; }
-    60% { top: -300px; }
-    70% { top: -350px; }
-    80% { top: -400px; }
-    90% { top: -450px; }
-}
+// @keyframes move{
+//     0%  { top: 0px; }
+//     10% { top: -50px; }
+//     20% { top: -100px; }
+//     30% { top: -150px; }
+//     40% { top: -200px; }
+//     50% { top: -250px; }
+//     60% { top: -300px; }
+//     70% { top: -350px; }
+//     80% { top: -400px; }
+//     90% { top: -450px; }
+// }
 
 @-webkit-keyframes move {
     0%  { top: 0px; }
@@ -257,15 +277,15 @@ section:nth-of-type(2n+3){
 
 @-moz-keyframes move {
     0%  { top: 0px; }
-    10% { top: -50px; }
-    20% { top: -100px; }
-    30% { top: -150px; }
-    40% { top: -200px; }
-    50% { top: -250px; }
-    60% { top: -300px; }
-    70% { top: -350px; }
-    80% { top: -400px; }
-    90% { top: -450px; }
+    10% { top: -70px; }
+    20% { top: -140px; }
+    30% { top: -210px; }
+    40% { top: -280px; }
+    50% { top: -350px; }
+    60% { top: -420px; }
+    70% { top: -490px; }
+    80% { top: -560px; }
+    90% { top: -630px; }
 }
 
 @-o-keyframes move {
@@ -281,19 +301,12 @@ section:nth-of-type(2n+3){
     90% { top: -450px; }
 }
 
-@keyframes move {
-    0%  { top: 0px; }
-    10% { top: -50px; }
-    20% { top: -100px; }
-    30% { top: -150px; }
-    40% { top: -200px; }
-    50% { top: -250px; }
-    60% { top: -300px; }
-    70% { top: -350px; }
-    80% { top: -400px; }
-    90% { top: -450px; }
-}
 
+
+.active-menu-link {
+    color: $color-accent!important;
+    transition: all 350ms ease-in-out!important;
+}
 /* Beginning of the About Section */
 
 .about {
@@ -303,9 +316,20 @@ section:nth-of-type(2n+3){
     padding: 4em;
 
     .section-title{
-        margin-top: 2em;
-        font-size: 1.5em;    
+        &::before{
+            content: 'About Me';
+            position: absolute;
+            font-size: 10em;
+            line-height: 0.75em;
+            color: #f4f4f8;
+            opacity: 0.75;
+            z-index: -1;            
+            top: -200%;
+            left: -40vw;
+        
+        }
     }
+   
 
     .section-subtitle {
         position: relative;
@@ -351,16 +375,19 @@ section:nth-of-type(2n+3){
         .text {
             font-family: $font-secondary;
             width: 50%;
-            font-size: 1.25em;   
+            font-size: 1em;   
             text-align: justify;
             line-height: 1.5;
             
             h2{
+                position: relative;
                 margin: 0;
+
             }
 
-            p {
+            p {         
                 margin-top: 0.5em;
+                font-size: 1.25em;
             }
            
             button{
@@ -372,7 +399,7 @@ section:nth-of-type(2n+3){
                 font-weight: 700;
                 box-shadow: 0 10px 60px 20px rgb(255,255,255, 0.1);
                 background-color: $color-accent;
-                color: #ffffff;
+                color: $text-color;
                 cursor: pointer;
                 transition: all 350ms ease-in-out;
 
@@ -384,9 +411,58 @@ section:nth-of-type(2n+3){
                 }
             }
         }
-        img {
-            width: 90%;
+        .about-me-img{
+            position: relative;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: all 100ms ease-out;
+            
+            img {
+                position: relative;
+                width: 90%;
+                border-radius: 50%;
+                transform-style: preserve-3d;
+                transform: rotateZ(5deg);
+               
+            }
+
+            .card-icons {
+                position: absolute;
+                display: flex;
+                color: white;
+                transform: translateZ(60px) translate(5px,130px) rotateZ(-2deg);
+
+                i {
+                    font-size: 3.75em;
+                    padding: 0 10px;
+                    transition: color 350ms ease-in-out;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        color: $color-accent;
+                    }
+                }
+
+                a {
+                    color: white;
+                }
+             
+            }
+
         }
     }
 
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
+
+    
 }
