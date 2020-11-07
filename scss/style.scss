@@ -23,8 +23,101 @@ h1,h2,h3,h4,h5,h6 {
     font-family: $font-primary;
 }
 
+.lateral-bar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 150ms ease-in-out;
+    
+    .lateral-bar-icons{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        
+        transition: all 200ms ease-in;
+        
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color:rgb(22,22,22,0.75);
+            cursor: pointer;
+            border: 1px solid #ffffff ;
+            width: 70px;
+            height: 70px;
+            margin: 2.5px 0;
+            border-radius: 10px;
+            
+            &:hover{
+                background-color: $color-accent;
+                
+            }
+    
+            &:hover i{
+                color: $text-color;
+            }
+    
+            &:hover svg{
+                fill: $text-color;
+            }
+            
+            svg {
+                width: 3em;
+    
+                fill: #ffffff;
+    
+                &:hover{
+                    fill: $text-color
+                }
+            }
+            i{
+                color: #ffffff;
+                font-size: 2em;
+                padding: 10px 0;
+                  
+            }
+
+          
+        }
+         
+       
+    }
+
+    .collapse-toggle{
+        background: transparent;
+        border: none;
+        font-size: 2.5em;
+        margin-top: 10px;
+        cursor: pointer;
+        
+        i{
+            color: $color-accent;
+            transition: transform 200ms ease-in-out;
+        }
+        
+    }
+}
+.rotate-arrow-toggle{
+    transform: rotateZ(540deg);
+}
+
+.collapse{
+    transform: translateX(150%)
+}
+
 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
     min-height: 100vh;
+    z-index: -2;
 }
 
 section:nth-of-type(2n+3){
@@ -166,8 +259,9 @@ section:nth-of-type(2n+3){
     max-height: 800px;
 
     .hero-text{
-        
-        width: 80%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         color: white;
 
         & * {
@@ -230,22 +324,22 @@ section:nth-of-type(2n+3){
             }       
         }
     
-
+        button{
+            margin-top: 1.25em;
+            width: 12em;
+            padding: 0.75em 0.75em;
+            border-radius: 2em;
+            border: none;
+            font-size: 1.4em;
+            font-weight: 700;
+            box-shadow: 0 10px 60px 20px rgb(255,255,255, 0.1);
+            background-color: $color-accent;
+            cursor: pointer;
+        }
        
     }
 
-    button{
-        margin-top: 1.25em;
-        width: 12em;
-        padding: 0.75em 0.75em;
-        border-radius: 2em;
-        border: none;
-        font-size: 1.4em;
-        font-weight: 700;
-        box-shadow: 0 10px 60px 20px rgb(255,255,255, 0.1);
-        background-color: $color-accent;
-        cursor: pointer;
-    }
+    
 
 }
 
@@ -310,10 +404,7 @@ section:nth-of-type(2n+3){
 /* Beginning of the About Section */
 
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4em;
+   
 
     .section-title{
         &::before{
@@ -328,7 +419,7 @@ section:nth-of-type(2n+3){
             left: -40vw;
         
         }
-    }
+     }
    
 
     .section-subtitle {
@@ -371,6 +462,7 @@ section:nth-of-type(2n+3){
         width: 100%;
         justify-content: center;
         align-items: center;
+        
 
         .text {
             font-family: $font-secondary;
@@ -378,6 +470,8 @@ section:nth-of-type(2n+3){
             font-size: 1em;   
             text-align: justify;
             line-height: 1.5;
+            transform: translateX(+150%);
+            transition: transform 300ms ease-out;    
             
             h2{
                 position: relative;
@@ -411,6 +505,7 @@ section:nth-of-type(2n+3){
                 }
             }
         }
+        
         .about-me-img{
             position: relative;
             transform-style: preserve-3d;
@@ -418,7 +513,13 @@ section:nth-of-type(2n+3){
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            transition: all 100ms ease-out;
+            
+            transition: transform 200ms ease-out;
+            
+            .img-wrapper{
+                transform: translateX(-150%);
+                transition: transform 500ms ease-out;
+            
             
             img {
                 position: relative;
@@ -428,13 +529,13 @@ section:nth-of-type(2n+3){
                 transform: rotateZ(5deg);
                
             }
-
+            }
             .card-icons {
                 position: absolute;
                 display: flex;
                 color: white;
-                transform: translateZ(60px) translate(5px,130px) rotateZ(-2deg);
-
+                transform: translateZ(60px) translate(-370%,130px) rotateZ(-2deg);
+                transition: transform 500ms ease-out;
                 i {
                     font-size: 3.75em;
                     padding: 0 10px;
@@ -459,10 +560,21 @@ section:nth-of-type(2n+3){
 
 
 .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4em;
 
+    position: relative;
+   
+    
+        &::before{
+            content: 'Skills';
+            position: absolute;
+            font-size: 15em;
+            color: #ffffff;
+            opacity: 0.75;
+            z-index: -1;            
+            top: -30px;
+            right: 0.25em;
+        
+        }
+    
     
 }

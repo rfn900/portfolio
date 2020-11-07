@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     ) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          console.log(entry.target.id)
+          if(entry.target.id == "about-section"){
+            document.querySelector(".img-wrapper").style.transform = "translateX(0%)"
+            document.querySelector(".main-content .text").style.transform = "translateX(0%)"
+            document.querySelector(".card-icons").style.transform = "translateZ(60px) translate(-20px,130px) rotateZ(-2deg)"
+          }
           //console.log(entry.target.id);
           document.getElementById(`${entry.target.id}-link`).style.color = "#F6B21B";
           //document.getElementById(`${entry.target.id}-link`).classList.add("active-menu-link");
@@ -59,14 +65,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let img_card = document.getElementById("card-img");
     let img = document.querySelector("#card-img img");
+    console.log(img, img_card)
     img.addEventListener("mousemove", e=> {
-      let xAxis = (e.pageX-img_card.offsetLeft-img_card.offsetWidth/2)/5;
-      let yAxis = (e.pageY-img_card.offsetTop-img_card.offsetHeight/2)/5 ;
+      let xAxis = (e.pageX-img_card.offsetLeft-img.offsetWidth/2)/5;
+      let yAxis = (e.pageY-img_card.offsetTop-img.offsetHeight/2)/5 ;
       img_card.style.transform = `rotateY(${xAxis}deg) rotateX(${-1*yAxis}deg)`;
-      console.log(-1*xAxis,yAxis)
     })
 
+    let collapse_bar = document.getElementById("collapse-bar");
+    let lateral_bar_icons = document.getElementById("lateral-bar-icons");
+    let arrow = document.querySelector("#collapse-bar i");
+    collapse_bar.addEventListener("click", e => {
 
+      lateral_bar_icons.classList.toggle("collapse");
+      arrow.classList.toggle("rotate-arrow-toggle");
+      
+    })
 
 
 
