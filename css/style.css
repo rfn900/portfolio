@@ -52,20 +52,22 @@ h1, h2, h3, h4, h5, h6 {
 .lateral-bar .lateral-bar-icons div:hover i {
   color: #161616;
 }
-.lateral-bar .lateral-bar-icons div:hover svg {
-  fill: #161616;
+.lateral-bar .lateral-bar-icons div:hover p {
+  color: #F6B21B;
 }
-.lateral-bar .lateral-bar-icons div svg {
-  width: 3em;
-  fill: #ffffff;
-}
-.lateral-bar .lateral-bar-icons div svg:hover {
-  fill: #161616;
+.lateral-bar .lateral-bar-icons div p {
+  position: absolute;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
 }
 .lateral-bar .lateral-bar-icons div i {
   color: #ffffff;
   font-size: 2em;
   padding: 10px 0;
+}
+.lateral-bar .lateral-bar-icons div .fa-file {
+  font-size: 2.75em;
 }
 .lateral-bar .collapse-toggle {
   background: transparent;
@@ -102,7 +104,7 @@ section:nth-of-type(2n+3) {
 
 .section-title {
   position: relative;
-  margin-top: 2em;
+  margin-top: 0.25em;
   font-size: 1.5em;
 }
 .section-title h2 {
@@ -271,7 +273,7 @@ section:nth-of-type(2n+3) {
   margin-top: 1.25em;
   width: 12em;
   padding: 0.75em 0.75em;
-  border-radius: 2em;
+  border-radius: 10px;
   border: none;
   font-size: 1.4em;
   font-weight: 700;
@@ -505,6 +507,7 @@ section:nth-of-type(2n+3) {
   color: white;
 }
 
+/*Beginning of the Skills Section*/
 .skills {
   position: relative;
 }
@@ -515,8 +518,104 @@ section:nth-of-type(2n+3) {
   color: #ffffff;
   opacity: 0.75;
   z-index: -1;
-  top: -30px;
+  top: 0;
   right: 0.25em;
+}
+.skills .skills-area {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.skills .skills-area .skill-filter-item {
+  font-size: 1.25em;
+  width: 80%;
+  border-radius: 10px;
+  padding: 1em;
+  margin-top: 2em;
+  box-shadow: -5px 10px 40px 1px rgba(0, 0, 0, 0.1);
+}
+.skills .skills-area .skill-filter-item .skills-icons-row {
+  margin-top: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p {
+  min-width: 7.5em;
+  margin: 0.5em 5px;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p img {
+  margin: 0 5px;
+  width: 2em;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p i {
+  font-size: 2em;
+  margin-right: 0.1em;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-js-square {
+  color: #FFCA27;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-html5 {
+  color: #E44D26;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-css3-alt {
+  color: #274DE4;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-react {
+  color: #61DBFB;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-angular {
+  color: #dd1b16;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-sass {
+  color: #c69;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-node-js {
+  color: #3c873a;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-php {
+  color: #8993be;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-wordpress {
+  color: #21759b;
+}
+.skills .skills-area .skill-filter-item .skills-icons-row p .fa-shopify {
+  color: #95BF47;
+}
+
+.portfolio {
+  position: relative;
+}
+.portfolio::before {
+  content: "Portfolio";
+  position: absolute;
+  font-size: 15em;
+  color: #fafafa;
+  opacity: 0.75;
+  z-index: -1;
+  top: 0px;
+  left: 0.25em;
+}
+
+.contact-me {
+  position: relative;
+}
+.contact-me::before {
+  content: "Contact Me";
+  width: 100%;
+  line-height: 0.85;
+  position: absolute;
+  font-size: 15em;
+  color: #ffffff;
+  opacity: 0.75;
+  z-index: -1;
+  top: 0;
+  left: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
