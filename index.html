@@ -10,7 +10,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-
+<div class="super-wrapper">
     <nav class="navbar">
         <div class="contain-width">
             <div class="logo"><a href="#">RodrigoNascimento.<span>se</span></a></div>
@@ -23,6 +23,15 @@
                     <li> <a id="contact-me-section-link" href="#contact-me-section">Contact Me</a></li>
                 </ul>
             </div>
+
+            <div class="menu-toggle">
+                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+        
+                <label for="toggle-checkbox" class="menulist">
+                <span></span>
+            </label>
+            </div>
+            
         </div>
     </nav> 
 
@@ -104,6 +113,8 @@
                 <div class="skills-icons-row">
                     <p><i class="fab fa-node-js"></i>Node.js</p>
                     <p><i class="fab fa-php"></i>PHP</p>
+                    <p><img src="./assets/mysql.png" alt="">MySQL</p>
+                    <p><img src="./assets/mongodb.png" alt="">MongoDB</p>
                 </div>
             </div>
             <div class="skill-filter-item">
@@ -130,6 +141,78 @@
         <div class="section-title">
             <h2>Portfolio</h2> 
         </div>
+        <div class="portfolio-area">
+            <div class="portfolio-item large item-1">
+                <h2>Mr.Storkey Blog</h2>
+
+                <div class="project-tech">
+                    <i class="fab fa-wordpress"></i>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="project-links">
+                    <a target ="_blank" href="https://mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+            </div>
+            <div class="portfolio-item small item-2">
+                <h2>Dev Quiz</h2>
+
+                <div class="project-tech">
+                    <i class="fab fa-js-square"></i>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="project-links">
+                    <a target ="_blank" href="https://rfn900.github.io/quiz-project">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a target ="_blank" href="https://github.com/rfn900/quiz-project">
+                        <i class="fab fa-github-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-item small item-3">
+                <h2>Yahtzee</h2>
+
+                <div class="project-tech">
+                    <i class="fab fa-js-square"></i>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="project-links">
+                    <a target ="_blank" href="https://rfn900.github.io/yatzy">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a target ="_blank" href="https://github.com/rfn900/yatzy">
+                        <i class="fab fa-github-alt"></i>
+                    </a>
+                </div>            </div>
+            <div class="portfolio-item large item-5">
+                <h2>Woocommerce Shop</h2>
+
+                <div class="project-tech">
+                    <i class="fab fa-wordpress"></i>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="project-links">
+                    <a target ="_blank" href="https://shop.mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-item large-width item-4">
+                <h2>FitnessFia Blog</h2>
+
+                <div class="project-tech">
+                    <i class="fab fa-wordpress"></i>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="project-links">
+                    <a target ="_blank" href="https://fitnessfia.com"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="contact-me-section" class="contact-me">
@@ -139,14 +222,16 @@
     </section>
     
     <div id="lateral-bar" class="lateral-bar">
-        <div id="lateral-bar-icons" class="lateral-bar-icons">
+        <div id="lateral-bar-icons" class="lateral-bar-icons collapse">
             <div><i class="fas fa-file"></i><p>CV</p></div>
             <div><i class="fab fa-linkedin-in"></i></div>
             <div><i class="fab fa-github-alt"></i></div>
             <div><i class="fas fa-envelope"></i></div>
         </div>
         
-        <div id="collapse-bar" class="collapse-toggle"><i class="fas fa-angle-right"></i></div>
+        <div id="collapse-bar" class="collapse-toggle rotate-arrow-toggle"><i class="fas fa-angle-right"></i></div>
     </div>
+</div>
+    
 </body>
 </html>

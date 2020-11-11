@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const nav = document.querySelector("nav");
     const sectionOne = document.querySelector(".hero");
     const sections = Array.from(document.getElementsByTagName("section"));
-    
+    const nav_toggle_checkbox = document.getElementById("toggle-checkbox");
+
     const sectionOneOptions = {
      
       rootMargin: "-100% 0px 0px 0px",
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const sectionOptions = {
      
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.2
      
     };
     
@@ -21,20 +22,33 @@ document.addEventListener("DOMContentLoaded", ()=>{
       sectionObserver
     ) {
       entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.2) document.getElementById(`${entry.target.id}-link`).style.color = "";
+
         if (entry.isIntersecting) {
-          console.log(entry.target.id)
+          //console.log(entry.target.id)
           if(entry.target.id == "about-section"){
             document.querySelector(".img-wrapper").style.transform = "translateX(0%)"
             document.querySelector(".main-content .text").style.transform = "translateX(0%)"
-            document.querySelector(".card-icons").style.transform = "translateZ(60px) translate(-20px,130px) rotateZ(-2deg)"
+            document.querySelector(".card-icons").style.transform = "translateZ(60px) translate(10px,130px) rotateZ(-2deg)"
+            
           }
-          //console.log(entry.target.id);
+          
+          if(entry.target.id == "skills-section"){
+              document.querySelectorAll(".skill-filter-item").forEach(item=>{
+              item.style.transform = "translateX(0%)"
+            })
+          }
+          
+          if(entry.target.id == "portfolio-section"){
+            document.querySelectorAll(".portfolio-item").forEach(item => {
+                item.style.transform = "translateX(0%)"
+              });
+          }
+          document.getElementById(`${entry.target.id}-link`).style.color = "";
           document.getElementById(`${entry.target.id}-link`).style.color = "#F6B21B";
-          //document.getElementById(`${entry.target.id}-link`).classList.add("active-menu-link");
+          console.log(entry)
         } else {
           document.getElementById(`${entry.target.id}-link`).style.color = "";
-
-         // document.getElementById(`${entry.target.id}-link`).classList.remove("active-menu-link");
         }
       });
     },
@@ -52,9 +66,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (entry.isIntersecting) {
           
             nav.classList.remove("scrolled");  
-        
+            document.querySelector(".menulist span").style.backgroundColor = "#ffffff"
+
         } else {
-                nav.classList.add("scrolled");      
+          if(!nav_toggle_checkbox.checked){
+
+            nav.classList.add("scrolled"); 
+            document.querySelector(".menulist span").style.backgroundColor = "#ffffff"
+          }
+          
+          
         }
       });
     },
@@ -68,8 +89,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     console.log(img, img_card)
     img.addEventListener("mousemove", e=> {
       let xAxis = (e.pageX-img_card.offsetLeft-img.offsetWidth/2)/5;
-      let yAxis = (e.pageY-img_card.offsetTop-img.offsetHeight/2)/5 ;
-      img_card.style.transform = `rotateY(${xAxis}deg) rotateX(${-1*yAxis}deg)`;
+      let yAxis = (e.clientY-img.offsetHeight/2)/5 ;
+
+      img_card.style.transform = `rotateY(${xAxis}deg) rotateX(0deg)`;
+      console.log(yAxis,e.clientY,img_card.offsetTop)
     })
 
     let collapse_bar = document.getElementById("collapse-bar");
@@ -83,7 +106,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
 
+    nav_toggle_checkbox.addEventListener("change", ()=>{
+      if(nav_toggle_checkbox.checked)collapse_bar.style.display = "none";
+      else collapse_bar.style.display ="block"
+        //document.querySelector(".menulist span").style.backgroundColor = "white"
+        document.querySelector(".navbar-menu").classList.toggle("navbar-menu-collapse");
+    })
 
+    document.querySelectorAll(".navbar-menu li a").forEach(item => {
+      item.addEventListener("click", e=>{
+        nav.classList.add("scrolled");
+        nav_toggle_checkbox.checked=false;
+        collapse_bar.style.display ="block"
+        document.querySelector(".navbar-menu").classList.remove("navbar-menu-collapse");
+      })  
+
+    })
+
+    document.addEventListener("click",e=>{
+      console.log(e.target)
+    })
 
 })
 

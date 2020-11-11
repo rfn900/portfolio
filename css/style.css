@@ -2,6 +2,23 @@
 html {
   scroll-behavior: smooth;
   color: #161616;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  z-index: -1;
+}
+
+.super-wrapper {
+  z-index: -999;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
 }
 
 * {
@@ -12,8 +29,16 @@ html {
   font-family: "Ubuntu", sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .lateral-bar {
@@ -26,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 150ms ease-in-out;
+  z-index: 9;
 }
 .lateral-bar .lateral-bar-icons {
   display: flex;
@@ -59,20 +85,24 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .lateral-bar .lateral-bar-icons div i {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 2rem;
   padding: 10px 0;
 }
 .lateral-bar .lateral-bar-icons div .fa-file {
-  font-size: 2.75em;
+  font-size: 2.75rem;
 }
 .lateral-bar .collapse-toggle {
+  position: absolute;
+  z-index: 4;
+  top: 95%;
+  right: 15px;
   background: transparent;
   border: none;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-top: 10px;
   cursor: pointer;
 }
@@ -93,7 +123,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4em;
+  padding: 4rem;
   min-height: 100vh;
   z-index: -2;
 }
@@ -104,8 +134,8 @@ section:nth-of-type(2n+3) {
 
 .section-title {
   position: relative;
-  margin-top: 0.25em;
-  font-size: 1.5em;
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
 }
 .section-title h2 {
   position: relative;
@@ -115,7 +145,7 @@ section:nth-of-type(2n+3) {
   z-index: 1;
   content: "";
   position: absolute;
-  top: 1.1em;
+  top: 60%;
   left: 0;
   width: 100%;
   height: 30%;
@@ -123,16 +153,17 @@ section:nth-of-type(2n+3) {
 }
 
 .contain-width {
-  max-width: 90em;
+  max-width: 90rem;
   margin: auto;
 }
 
 /* Beginning of the Navbar Section */
 .navbar {
-  padding: 2em 5em;
+  padding: 2em 5rem;
   overflow: hidden;
   position: fixed;
-  width: 100%;
+  z-index: 999;
+  width: 100vw;
   top: 0;
   background-color: transparent;
   transition: all 350ms ease-in-out;
@@ -159,8 +190,8 @@ section:nth-of-type(2n+3) {
 .navbar .navbar-menu ul li {
   position: relative;
   float: left;
-  margin-left: 1.4em;
-  font-size: 1.4em;
+  margin-left: 1.4rem;
+  font-size: 1.4rem;
 }
 .navbar .navbar-menu ul li::after {
   z-index: -1;
@@ -184,20 +215,21 @@ section:nth-of-type(2n+3) {
 }
 
 .scrolled {
-  padding: 1em 5em;
-  background-color: #ffffff;
+  position: fixed;
+  padding: 1em 5rem;
+  background-color: #161616;
   z-index: 99999;
   transition: all 350ms ease-in-out;
   box-shadow: 0px 1px 50px 10px rgba(0, 0, 0, 0.05);
 }
 .scrolled .logo a {
-  color: #161616;
+  color: white;
 }
 .scrolled .logo span {
-  color: #161616;
+  color: #F6B21B;
 }
 .scrolled .navbar-menu ul li a {
-  color: #161616;
+  color: #ffffff;
 }
 
 /* Beginning of the Hero Section */
@@ -207,16 +239,19 @@ section:nth-of-type(2n+3) {
   background: url("../assets/hero_portfolio.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 4em;
+  padding: 4rem;
   justify-content: center;
   height: 100vh;
   max-height: 800px;
+  position: relative;
+  z-index: 1;
 }
 .hero .hero-text {
   display: flex;
   flex-direction: column;
   width: 100%;
   color: white;
+  font-size: 16px;
 }
 .hero .hero-text * {
   margin-bottom: 0.4em;
@@ -234,17 +269,20 @@ section:nth-of-type(2n+3) {
   font-size: 2.75em;
 }
 .hero .hero-text .hero-description p {
-  height: 50px;
+  height: 1em;
   float: left;
-  margin-right: 0.3em;
+  margin-right: 0.15em;
+  line-height: 0.9em;
 }
 .hero .hero-text .hero-description b {
   float: left;
   overflow: hidden;
   position: relative;
-  height: 50px;
+  height: 1em;
+  line-height: 1em;
 }
 .hero .hero-text .hero-description .inner-text-box {
+  z-index: 1;
   color: #F6B21B;
   position: relative;
   white-space: nowrap;
@@ -270,12 +308,12 @@ section:nth-of-type(2n+3) {
   animation-delay: 1s;
 }
 .hero .hero-text button {
-  margin-top: 1.25em;
+  margin-top: 1em;
   width: 12em;
-  padding: 0.75em 0.75em;
+  padding: 10px;
   border-radius: 10px;
   border: none;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 700;
   box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
   background-color: #F6B21B;
@@ -287,31 +325,31 @@ section:nth-of-type(2n+3) {
     top: 0px;
   }
   10% {
-    top: -50px;
+    top: -1em;
   }
   20% {
-    top: -100px;
+    top: -2em;
   }
   30% {
-    top: -150px;
+    top: -3em;
   }
   40% {
-    top: -200px;
+    top: -4em;
   }
   50% {
-    top: -250px;
+    top: -5em;
   }
   60% {
-    top: -300px;
+    top: -6em;
   }
   70% {
-    top: -350px;
+    top: -7em;
   }
   80% {
-    top: -400px;
+    top: -8em;
   }
   90% {
-    top: -450px;
+    top: -9em;
   }
 }
 @-moz-keyframes move {
@@ -384,30 +422,36 @@ section:nth-of-type(2n+3) {
 }
 
 /* Beginning of the About Section */
+.about {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+}
 .about .section-title::before {
   content: "About Me";
   position: absolute;
   font-size: 10em;
-  line-height: 0.75em;
+  line-height: 0.75;
   color: #f4f4f8;
   opacity: 0.75;
   z-index: -1;
-  top: -200%;
+  top: -100%;
   left: -40vw;
 }
 .about .section-subtitle {
   position: relative;
-  margin-top: 0.75em;
-  font-size: 1em;
+  margin-top: 0.75rem;
+  font-size: 1rem;
   font-style: italic;
+  padding: 0 1rem;
 }
 .about .section-subtitle::before {
   content: url(../assets/quot.png);
   height: 20px;
   font-size: 20px;
   position: absolute;
-  left: -2.25em;
-  top: -0.75em;
+  left: -2.25rem;
+  top: -0.75rem;
   transform: rotateZ(15deg) scale(0.35);
 }
 .about .section-subtitle::after {
@@ -415,47 +459,49 @@ section:nth-of-type(2n+3) {
   height: 20px;
   font-size: 20px;
   position: absolute;
-  top: 0.65em;
-  right: -2.35em;
+  top: 0.65rem;
+  right: -2.35rem;
   transform: rotateZ(190deg) scale(0.35);
 }
 .about .section-subtitle span {
   float: right;
-  margin-top: 1em;
+  margin-top: 1rem;
   font-weight: 500;
-  margin-right: 0.75em;
+  margin-right: 0.75rem;
 }
 .about .main-content {
-  padding: 4em;
+  padding: 4rem;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .about .main-content .text {
   font-family: "Poppins", sans-serif;
+  margin-left: 0.5rem;
   width: 50%;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: justify;
   line-height: 1.5;
-  transform: translateX(150%);
-  transition: transform 300ms ease-out;
+  transform: translateX(550%);
+  transition: transform 500ms 750ms ease-out;
 }
 .about .main-content .text h2 {
   position: relative;
   margin: 0;
 }
 .about .main-content .text p {
-  margin-top: 0.5em;
-  font-size: 1.25em;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
 }
 .about .main-content .text button {
-  margin-top: 1.25em;
-  padding: 0.75em 1.75em;
+  margin-top: 1.25rem;
+  padding: 0.75em 1.75rem;
   border-radius: 5px;
   border: 4px solid #F6B21B;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 700;
   box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
   background-color: #F6B21B;
@@ -474,15 +520,16 @@ section:nth-of-type(2n+3) {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: transform 200ms ease-out;
+  margin: 40px 0;
+  transition: transform 350ms ease-out;
 }
 .about .main-content .about-me-img .img-wrapper {
-  transform: translateX(-150%);
-  transition: transform 500ms ease-out;
+  transform: translateX(-550%);
+  transition: transform 500ms 350ms ease-out;
 }
 .about .main-content .about-me-img .img-wrapper img {
   position: relative;
-  width: 90%;
+  width: 100%;
   border-radius: 50%;
   transform-style: preserve-3d;
   transform: rotateZ(5deg);
@@ -491,11 +538,11 @@ section:nth-of-type(2n+3) {
   position: absolute;
   display: flex;
   color: white;
-  transform: translateZ(60px) translate(-370%, 130px) rotateZ(-2deg);
-  transition: transform 500ms ease-out;
+  transform: translateZ(60px) translate(0, 130px) rotateZ(-2deg);
+  transition: transform 500ms 250ms ease-out;
 }
 .about .main-content .about-me-img .card-icons i {
-  font-size: 3.75em;
+  font-size: 3.75rem;
   padding: 0 10px;
   transition: color 350ms ease-in-out;
   cursor: pointer;
@@ -509,6 +556,7 @@ section:nth-of-type(2n+3) {
 
 /*Beginning of the Skills Section*/
 .skills {
+  font-size: 16px;
   position: relative;
 }
 .skills::before {
@@ -516,46 +564,59 @@ section:nth-of-type(2n+3) {
   position: absolute;
   font-size: 15em;
   color: #ffffff;
-  opacity: 0.75;
-  z-index: -1;
-  top: 0;
-  right: 0.25em;
+  opacity: 1;
+  z-index: -5;
+  top: -0.1rem;
+  right: 0.15rem;
 }
 .skills .skills-area {
+  position: relative;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  position: relative;
   z-index: 1;
 }
 .skills .skills-area .skill-filter-item {
-  font-size: 1.25em;
+  position: relative;
+  background: #fafafa;
+  font-size: 1.25rem;
   width: 80%;
   border-radius: 10px;
-  padding: 1em;
-  margin-top: 2em;
+  padding: 1rem;
+  margin-top: 2rem;
+  z-index: 1;
   box-shadow: -5px 10px 40px 1px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease-out;
+}
+.skills .skills-area .skill-filter-item:nth-of-type(2n) {
+  transform: translateX(-150%);
+}
+.skills .skills-area .skill-filter-item:nth-of-type(2n+1) {
+  transform: translateX(150%);
+}
+.skills .skills-area .skill-filter-item img {
+  transform: translateY(3px);
 }
 .skills .skills-area .skill-filter-item .skills-icons-row {
-  margin-top: 1em;
+  margin-top: 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p {
-  min-width: 7.5em;
+  min-width: 7.5rem;
   margin: 0.5em 5px;
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p img {
   margin: 0 5px;
-  width: 2em;
+  width: 2rem;
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p i {
-  font-size: 2em;
-  margin-right: 0.1em;
+  font-size: 2rem;
+  margin-right: 0.1rem;
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p .fa-js-square {
   color: #FFCA27;
@@ -590,20 +651,147 @@ section:nth-of-type(2n+3) {
 
 .portfolio {
   position: relative;
+  font-size: 16px;
 }
 .portfolio::before {
   content: "Portfolio";
   position: absolute;
   font-size: 15em;
-  color: #fafafa;
+  color: #f4f4f8;
   opacity: 0.75;
-  z-index: -1;
+  z-index: -5;
   top: 0px;
-  left: 0.25em;
+  right: 0;
+}
+.portfolio .portfolio-area {
+  display: grid;
+  min-height: 80vh;
+  min-width: 60vw;
+  grid-template-rows: repeat(3, minmax(10em, 1fr));
+  grid-template-columns: repeat(4, minmax(10em, 1fr));
+  grid-gap: 20px;
+  margin-top: 2rem;
+  padding: 1rem;
+  z-index: 1;
+}
+.portfolio .portfolio-area .portfolio-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  z-index: 1;
+  transition: transform 500ms ease-out;
+}
+.portfolio .portfolio-area .portfolio-item:nth-of-type(2n) {
+  transform: translateX(250%);
+}
+.portfolio .portfolio-area .portfolio-item:nth-of-type(2n+1) {
+  transform: translateX(-250%);
+}
+.portfolio .portfolio-area .portfolio-item h2 {
+  font-size: 1.25rem;
+  background-color: #161616;
+  color: white;
+  text-align: center;
+}
+.portfolio .portfolio-area .portfolio-item .project-links {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.25rem;
+  color: #161616;
+  cursor: pointer;
+  z-index: 2;
+}
+.portfolio .portfolio-area .portfolio-item .project-links a {
+  font-size: 1rem;
+  transition: all 100ms ease-in-out;
+}
+.portfolio .portfolio-area .portfolio-item .project-links a:hover {
+  color: #F6B21B;
+  transform: scale(1.2);
+}
+.portfolio .portfolio-area .portfolio-item .project-tech {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech * {
+  margin-right: 5px;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech .fa-wordpress {
+  color: #21759b;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech .fa-html5 {
+  color: #E44D26;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech .fa-css3-alt {
+  color: #274DE4;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech .fa-js-square {
+  color: #FFDB5C;
+}
+.portfolio .portfolio-area .portfolio-item.large {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.portfolio .portfolio-area .portfolio-item.large-width {
+  grid-column: span 2;
+}
+.portfolio .portfolio-area .portfolio-item.small .project-links {
+  bottom: 5px;
+  right: 5px;
+  font-size: 1rem;
+}
+.portfolio .portfolio-area .portfolio-item.small .project-tech {
+  bottom: 5px;
+  left: 5px;
+  font-size: 1.25rem;
+  margin: 0;
+}
+.portfolio .portfolio-area .portfolio-item.item-1 {
+  position: relative;
+  background: url("../assets/mrstorkey-screen.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fafafa;
+}
+.portfolio .portfolio-area .portfolio-item.item-2 {
+  position: relative;
+  background: url("../assets/quiz-screen-2.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fafafa;
+}
+.portfolio .portfolio-area .portfolio-item.item-3 {
+  position: relative;
+  background: url("../assets/yatzi-screen.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fafafa;
+}
+.portfolio .portfolio-area .portfolio-item.item-4 {
+  position: relative;
+  background: url("../assets/fintessfia.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fafafa;
+}
+.portfolio .portfolio-area .portfolio-item.item-5 {
+  position: relative;
+  background: url("../assets/shop-mrstorkey.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fafafa;
 }
 
 .contact-me {
   position: relative;
+  font-size: 16px;
 }
 .contact-me::before {
   content: "Contact Me";
@@ -616,6 +804,207 @@ section:nth-of-type(2n+3) {
   z-index: -1;
   top: 0;
   left: 10%;
+}
+
+/* Styling the mobile navigation menu */
+.toggle-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menulist {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  z-index: 9999;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.menulist span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  transform: translateY(0px);
+  background-color: inherit;
+  transition: transform 250ms ease-in-out;
+}
+.menulist span::before {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  transform: translateY(-10px);
+  background-color: inherit;
+  transition: transform 250ms ease-in-out;
+  content: "";
+}
+.menulist span::after {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  transform: translateY(10px);
+  background-color: inherit;
+  transition: transform 250ms ease-in-out;
+  content: "";
+}
+
+.toggle-checkbox:checked ~ .menulist > span::after {
+  opacity: 0;
+}
+
+.toggle-checkbox:checked ~ .menulist > span {
+  transform: rotate(135deg);
+  background-color: #ffffff !important;
+}
+
+.toggle-checkbox:checked ~ .menulist > span::before {
+  transform: translateY(0px) rotate(90deg);
+}
+
+/* Beginning of the Media Queries */
+@media screen and (max-width: 1280px) {
+  .about .main-content {
+    padding: 0;
+  }
+  .about .main-content .text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 4em 2em;
+  }
+
+  .hero {
+    padding: 4rem 2.75rem;
+  }
+
+  .navbar {
+    padding: 20px 40px;
+    margin: 0;
+  }
+  .navbar .contain-width {
+    display: flex;
+    align-items: center;
+  }
+  .navbar .logo {
+    font-size: 18px;
+  }
+
+  .navbar-menu-collapse {
+    transform: translateX(0%) !important;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    z-index: 999 !important;
+    background: #E44D26;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 350ms ease-out;
+  }
+  .navbar-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+  }
+  .navbar-menu ul li {
+    margin-bottom: 10px;
+    float: none !important;
+    position: relative;
+    font-size: 3.5rem !important;
+  }
+  .navbar-menu ul li::after {
+    display: none;
+  }
+  .navbar-menu ul li a {
+    color: white !important;
+    font-weight: 700 !important;
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    font-size: 12px !important;
+  }
+
+  .portfolio .portfolio-area {
+    width: 90%;
+    grid-template-rows: repeat(3, minmax(15em, 1fr));
+    grid-template-columns: repeat(2, minmax(10em, 1fr));
+  }
+  .portfolio .small {
+    grid-row: span 1 !important;
+    grid-column: span 1 !important;
+  }
+  .portfolio .large {
+    grid-row: span 1 !important;
+    grid-column: span 1 !important;
+  }
+  .portfolio .large-width {
+    grid-row: span 1 !important;
+    grid-column: span 1 !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card-icons i {
+    font-size: 2.5em !important;
+    transform: translateY(-40px) !important;
+  }
+
+  .hero-text {
+    font-size: 8px !important;
+  }
+
+  .portfolio {
+    font-size: 6px;
+  }
+  .portfolio .portfolio-area {
+    width: 90vw;
+    grid-template-rows: repeat(5, minmax(15rem, 1fr));
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  }
+
+  .about .section-title::before {
+    font-size: 5em;
+    line-height: 6rem;
+    top: -100%;
+    left: -60%;
+  }
+  .about .main-content .text {
+    width: 100%;
+  }
+
+  .skills {
+    font-size: 10px;
+  }
+  .skills .skills-area .skill-filter-item {
+    width: 100%;
+  }
+
+  .contact-me {
+    font-size: 6px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
