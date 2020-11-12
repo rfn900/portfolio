@@ -67,10 +67,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
           
             nav.classList.remove("scrolled");  
             document.querySelector(".menulist span").style.backgroundColor = "#ffffff"
-
+            document.querySelector(".scroll-up-button").classList.remove("scroll-up-pop");
         } else {
           if(!nav_toggle_checkbox.checked){
-
+            document.querySelector(".scroll-up-button").classList.add("scroll-up-pop");
             nav.classList.add("scrolled"); 
             document.querySelector(".menulist span").style.backgroundColor = "#ffffff"
           }
@@ -123,8 +123,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     })
 
-    document.addEventListener("click",e=>{
-      console.log(e.target)
+    const projects_button = document.getElementById("go-to-projects");
+    projects_button.addEventListener("click",e=>{
+      window.location.href="#portfolio-section"
     })
 
 })
