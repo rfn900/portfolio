@@ -715,7 +715,7 @@ section:nth-of-type(2n+3){
 .portfolio {
     position: relative;
     font-size: 16px;
-    
+    z-index: 1;
         &::before{
             content: 'Portfolio';
             position: absolute;
@@ -879,7 +879,7 @@ section:nth-of-type(2n+3){
 
 
 .contact-me {
-
+    min-height: 80vh;
     position: relative;
     font-size: 16px;
     
@@ -895,9 +895,22 @@ section:nth-of-type(2n+3){
             top: 0;
             left: 10%;
 
-        
         }
 
+        .contact-area{
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
+        }
 }
 
 
@@ -966,6 +979,16 @@ section:nth-of-type(2n+3){
     transform: translateY(0px) rotate(90deg);
     
 }       
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;    
+    height: 10vh;
+    background-color: $text-color;
+    color:white
+}
 
 /* Beginning of the Media Queries */
 

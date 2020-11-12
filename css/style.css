@@ -652,6 +652,7 @@ section:nth-of-type(2n+3) {
 .portfolio {
   position: relative;
   font-size: 16px;
+  z-index: 1;
 }
 .portfolio::before {
   content: "Portfolio";
@@ -790,6 +791,7 @@ section:nth-of-type(2n+3) {
 }
 
 .contact-me {
+  min-height: 80vh;
   position: relative;
   font-size: 16px;
 }
@@ -804,6 +806,19 @@ section:nth-of-type(2n+3) {
   z-index: -1;
   top: 0;
   left: 10%;
+}
+.contact-me .contact-area {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-me .contact-area p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 /* Styling the mobile navigation menu */
@@ -868,6 +883,16 @@ section:nth-of-type(2n+3) {
 
 .toggle-checkbox:checked ~ .menulist > span::before {
   transform: translateY(0px) rotate(90deg);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 10vh;
+  background-color: #161616;
+  color: white;
 }
 
 /* Beginning of the Media Queries */

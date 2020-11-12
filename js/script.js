@@ -84,16 +84,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
     sectionOneObserver.observe(sectionOne);
     
 
-    let img_card = document.getElementById("card-img");
-    let img = document.querySelector("#card-img img");
-    console.log(img, img_card)
-    img.addEventListener("mousemove", e=> {
-      let xAxis = (e.pageX-img_card.offsetLeft-img.offsetWidth/2)/5;
-      let yAxis = (e.clientY-img.offsetHeight/2)/5 ;
+    // let img_card = document.getElementById("card-img");
+    // let img = document.querySelector("#card-img img");
+    // console.log(img, img_card)
 
-      img_card.style.transform = `rotateY(${xAxis}deg) rotateX(0deg)`;
-      console.log(yAxis,e.clientY,img_card.offsetTop)
-    })
+    // img.addEventListener("mousemove", e=> {
+    //   let xAxis = (e.clientX-img_card.offsetLeft-img.offsetWidth/2-60)/5;
+    //   let yAxis = (e.clientY-img_card.offsetTop-img.offsetWidth/2)/5 ;
+
+    //   img_card.style.transform = `rotateY(${xAxis}deg) rotateX(${-1*yAxis}deg)`;
+    // })
 
     let collapse_bar = document.getElementById("collapse-bar");
     let lateral_bar_icons = document.getElementById("lateral-bar-icons");
