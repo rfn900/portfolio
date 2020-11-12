@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let collapse_bar = document.getElementById("collapse-bar");
     let lateral_bar_icons = document.getElementById("lateral-bar-icons");
+    let lateral_bar = document.getElementById("lateral-bar");
     let arrow = document.querySelector("#collapse-bar i");
     collapse_bar.addEventListener("click", e => {
 

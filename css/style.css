@@ -51,7 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 150ms ease-in-out;
-  z-index: 9;
+  z-index: 1;
+  background: transparent;
 }
 .lateral-bar .lateral-bar-icons {
   display: flex;
@@ -357,31 +358,31 @@ section:nth-of-type(2n+3) {
     top: 0px;
   }
   10% {
-    top: -70px;
+    top: -1.4em;
   }
   20% {
-    top: -140px;
+    top: -2.8em;
   }
   30% {
-    top: -210px;
+    top: -4.2em;
   }
   40% {
-    top: -280px;
+    top: -5.6em;
   }
   50% {
-    top: -350px;
+    top: -7em;
   }
   60% {
-    top: -420px;
+    top: -8.4em;
   }
   70% {
-    top: -490px;
+    top: -9.8em;
   }
   80% {
-    top: -560px;
+    top: -11.2em;
   }
   90% {
-    top: -630px;
+    top: -12.6em;
   }
 }
 @-o-keyframes move {
@@ -673,7 +674,7 @@ section:nth-of-type(2n+3) {
   grid-gap: 20px;
   margin-top: 2rem;
   padding: 1rem;
-  z-index: 2;
+  z-index: 1;
 }
 .portfolio .portfolio-area .portfolio-item {
   position: relative;
@@ -683,7 +684,7 @@ section:nth-of-type(2n+3) {
   border-radius: 10px;
   background: #fafafa;
   border: 1px solid #eee;
-  z-index: 1;
+  z-index: 2;
   transition: transform 500ms ease-out;
 }
 .portfolio .portfolio-area .portfolio-item:nth-of-type(2n) {
@@ -705,7 +706,6 @@ section:nth-of-type(2n+3) {
   font-size: 1.25rem;
   color: #161616;
   cursor: pointer;
-  z-index: 2;
 }
 .portfolio .portfolio-area .portfolio-item .project-links a {
   font-size: 1rem;
