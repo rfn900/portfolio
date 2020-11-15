@@ -1,0 +1,103 @@
+# Report for Frontend 2 
+
+Scrum, Accessibility and Graphic Profile:
+
+##### Scrum: #####
+
+# Table of Contents
+
+1 - Fundamentals of Scrum 
+2 - Important concepts and terminology
+3 - The three roles in Scrum 
+4 - Why scrum?
+5 - Are there alternatives to Scrum?
+
+
+1) Fundamentals of Scrum
+
+Scrum is a framework used for the planning and management of complex projects, such as software development for example. In this framework, projects are divided into small iterations called sprints. Each sprint should not last more than four weeks and should present an increment to the final product to meet costumer demands. 
+
+Although each of these sprints may take up to 4 weeks to completion, they are monitored daily by short meetings (10 to 15 min) called "daily scrums", where the current day of work and status of the project is discussed. 
+
+Scrum is a framework based on the Agile model for software development.
+
+2) Important Concepts and terminology
+
+- Sprints: As mentioned before, sprints are the short cycles/iterations through which the tasks of a product development are tackled.
+
+- Product Backlog: It is the set of features or functionalities for the product. The sprints will, iteration by iteration, ultimately build each and everyone of these featured contained in the product backlog.
+
+- Sprint Backlog: It is the set of particular tasks to be developed in a given sprint. 
+
+- Sprint Planning Meetings: These are meetings that happen in the beginning of every sprint to plan or even prioritise the items of the product backlog that are going to be tackled in that sprint. 
+
+- Daily Scrum: Short daily meetings to monitor and follow the evolution of the project. In these meetings, the teams usually discuss and plan their daily work as well as identify problems and share knowledge between team members.
+
+- Sprint Review Meeting: These are meetings held at the end of every sprint to present the what has been accomplished as well as to analyse how that sprint work. What has worked, what needs to be changed and what needs to continue.
+
+3) Three Roles in Scrum
+
+These are the three roles in the scrum framework:
+
+- Product Owner: This is the person in charge of the final product. This person needs to have a full understanding of what the end costumer wants and needs. On top of that, the product owner should be able to communicate this vision clearly with the rest of the team.  The product owner is the person to be held accountable in case the final objective is not achieved.
+
+- Scrum Master: The scrum master is responsible to guide the team through the practice of scrum and make sure that everyone knows exactly what their role is. As a facilitator, the scrum master will help organise the team, motivate and remove impediments to make sure every sprint runs smoothly.
+
+- Scrum Developing Team: This is the team that will be tackling the tasks and building the project. Within the developing team one may find different roles like developer, product tester, etc. 
+
+4) Why Scrum?
+
+Scrum is a simple and high performant framework used to build complex projects within the agile principles. Its simplicity, light weight and intuitiveness make it the most popular agile framework for software development. When working in a scrum team one knows at all times what to strive for in terms of product quality and expectations. 
+
+5) Alternatives to Scrum?
+
+Scrum is known to be simple, adaptive and malleable framework. However, different products may require different solutions and different ways of tackling it. In Scrum, vague definitions of done or badly described tasks in a given sprint may hinder the progress of your project.
+
+For very complex multifaceted projects, these errors are more likely to appear. In addition, teams may need a greater number of specific roles in the team to better take care of entire development process. Some alternatives include: 
+
+- Kanban
+- Lean Software Development
+- Scrum of Scrums 
+
+
+
+##### Accessibility: #####
+
+When it comes to web development and web design, accessibility is the act of making your website or web application easy to use and accessible to everyone, including those with disabilities.
+
+The main advantage of adapting your site and content to accessibility standards is the potential to reach new audiences which in turn will increase your audience size and costumer base. 
+
+On top of that it is only a moral imperative to make sure that no person is left out of the amazing development we are witnessing in this information era. 
+
+Making your website accessible may consume extra resources and, simply put, take more work, but it has no drawbacks in the usability of your site for those users without any disability and it can only increase your base audience and make user experience actually better. 
+
+In my portfolio project I implemented the following accessibility standards: 
+
+1)Gör en logisk tab-ordning
+2)Skapa en flexibel layout som fungerar vid förstoring eller liten skärm
+3)Se till att allt innehåll presenteras rätt oavsett skärmens riktning
+4)Se till att markören inte fastnar vid tangentbordsnavigation
+5)Var konsekvent i navigation, struktur och utformning
+6)Använd text, inte bilder, för att visa text
+7)Skriv beskrivande rubriker och etiketter
+
+
+##### Graphic Profile:#####
+
+A graphic profile is a visual consistency which guides the entire appearance of your website or application. 
+
+In order to establish a visual consistency one needs to define:
+
+- The colors that represent the brand
+- The typography and fonts
+- The general style of the design elements. Geometrical or abstract. Round corners or hard angles, etc. 
+- Logo and branding
+
+Keeping a consistent graphic profile helps in building a strong brand image that is going to be recognised in any environment. Having a strong brand image enhances the image of professionalism for the brand. 
+
+On the web development side, following a graphic profile makes it easier to make design choices and to choose content like photographs and design elements to populate the project with. 
+
+All elements of the graphic profile should help to reinforce the brand image that you are trying to convey. The type of font, or the color, of the use of soft edges in geometrical figures, all of these details help tell a brand story. This visual consistency will help increase engagement in your website and drive more conversions to your clients. 
+
+Too strict graphic profiles may hinder the creative process for the design/developer. Therefore it is important to keep an open channel of communication with the product owner to be make sure you are able to explore your creativity as a developer within the bounds of your client's desired graphic profile.
+

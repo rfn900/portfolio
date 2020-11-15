@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const sections = Array.from(document.getElementsByTagName("section"));
     const nav_toggle_checkbox = document.getElementById("toggle-checkbox");
 
+    //I use the intersection observer to control for the different sections of my Single Page Application
     const sectionOneOptions = {
      
       rootMargin: "-100% 0px 0px 0px",
@@ -25,20 +26,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (entry.intersectionRatio > 0.2) document.getElementById(`${entry.target.id}-link`).style.color = "";
 
         if (entry.isIntersecting) {
-          //console.log(entry.target.id)
+          //Animate in elements when entering the about-section
           if(entry.target.id == "about-section"){
             document.querySelector(".img-wrapper").style.transform = "translateX(0%)"
             document.querySelector(".main-content .text").style.transform = "translateX(0%)"
             document.querySelector(".card-icons").style.transform = "translateZ(60px) translate(10px,130px) rotateZ(-2deg)"
             
           }
-          
+          //Animate in elements when entering the skills-section
           if(entry.target.id == "skills-section"){
               document.querySelectorAll(".skill-filter-item").forEach(item=>{
               item.style.transform = "translateX(0%)"
             })
           }
-          
+          //Animate in elements when entering the portfolio-section
           if(entry.target.id == "portfolio-section"){
             document.querySelectorAll(".portfolio-item").forEach(item => {
                 item.style.transform = "translateX(0%)"
@@ -84,17 +85,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     sectionOneObserver.observe(sectionOne);
     
 
-    // let img_card = document.getElementById("card-img");
-    // let img = document.querySelector("#card-img img");
-    // console.log(img, img_card)
-
-    // img.addEventListener("mousemove", e=> {
-    //   let xAxis = (e.clientX-img_card.offsetLeft-img.offsetWidth/2-60)/5;
-    //   let yAxis = (e.clientY-img_card.offsetTop-img.offsetWidth/2)/5 ;
-
-    //   img_card.style.transform = `rotateY(${xAxis}deg) rotateX(${-1*yAxis}deg)`;
-    // })
-
     let collapse_bar = document.getElementById("collapse-bar");
     let lateral_bar_icons = document.getElementById("lateral-bar-icons");
     let lateral_bar = document.getElementById("lateral-bar");
@@ -106,11 +96,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
       
     })
 
-
+    //Event listener for the mobile menu
     nav_toggle_checkbox.addEventListener("change", ()=>{
       if(nav_toggle_checkbox.checked)collapse_bar.style.display = "none";
       else collapse_bar.style.display ="block"
-        //document.querySelector(".menulist span").style.backgroundColor = "white"
         document.querySelector(".navbar-menu").classList.toggle("navbar-menu-collapse");
     })
 
@@ -129,5 +118,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
       window.location.href="#portfolio-section"
     })
 
+    const modal_link = document.getElementById("link-for-modal");
+    const close_span = document.querySelector(".modal-content span")
+    modal_link.addEventListener("click", () => {
+      document.querySelector(".program-description-modal").classList.add("show")
+     // document.querySelector(".program-description-modal").style.opacity = "1"; 
+    })
+    close_span.addEventListener("click", ()=>{
+      document.querySelector(".program-description-modal").classList.remove("show")
+    })
 })
 
