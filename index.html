@@ -5,281 +5,281 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="js/script.js" defer></script> -->
-    <script src="https://kit.fontawesome.com/15d187da22.js" crossorigin="anonymous"></script>
-    <script src="js/script.js" defer></script>
 </head>
 <body>
-<div class="super-wrapper">
-    <nav class="navbar">
-        <div class="contain-width">
-            <div class="logo"><a href="#">RodrigoNascimento.<span>se</span></a></div>
-            <div class="navbar-menu">
-                <ul>
-                    <li> <a id="hero-section-link" href="#">Home</a></li>
-                    <li> <a id="about-section-link" href="#about-section">About</a></li>
-                    <li> <a id="skills-section-link" href="#skills-section">Skills</a></li>
-                    <li> <a id="portfolio-section-link" href="#portfolio-section">Portfolio</a></li>
-                    <li> <a id="contact-me-section-link" href="#contact-me-section">Contact Me</a></li>
-                </ul>
-            </div>
+    <div class="super-wrapper">
+        <nav class="navbar">
+            <div class="contain-width">
+                <div class="logo"><a href="#">RodrigoNascimento.<span>se</span></a></div>
+                <div class="navbar-menu">
+                    <ul>
+                        <li> <a id="hero-section-link" href="#">Home</a></li>
+                        <li> <a id="about-section-link" href="#about-section">About</a></li>
+                        <li> <a id="skills-section-link" href="#skills-section">Skills</a></li>
+                        <li> <a id="portfolio-section-link" href="#portfolio-section">Portfolio</a></li>
+                        <li> <a id="contact-me-section-link" href="#contact-me-section">Contact Me</a></li>
+                    </ul>
+                </div>
 
-            <div class="menu-toggle">
-                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
-        
-                <label for="toggle-checkbox" class="menulist">
-                <span></span>
-            </label>
-            </div>
+                <div class="menu-toggle">
+                    <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
             
-        </div>
-    </nav> 
-
-    <section id="hero-section" class="hero">
-        <div class="hero-text">
-            <div class="hero-pre-title">
-                <p>Hello, I am a </p>
-            </div>
-            <div class="hero-title">
-                <h1>Fullstack Developer</h1>
-            </div>
-            <div class="hero-description">
-                <p>Specialized in</p>
-                    <b>
-                    <div class="inner-text-box">
-                        HTML/CSS<br />
-                        SASS<br />
-                        Javascript<br /> 
-                        Typescript<br /> 
-                        Python<br />
-                        PHP<br />
-                        NodeJS<br />
-                        React<br />
-                        React Native<br />
-                        Wordpress<br />
-                        </div>
-                    </b>
-            </div>
-            <button id="go-to-projects">Check My Projects</button>   
-        </div>
-        
-        
-    </section>
-
-    <section id="about-section" class="about">
-        <div class="section-title">
-            <h2>About Me</h2> 
-        </div>
-        <div class="section-subtitle">
-            <p>I have never let my schooling interfere with my education.</p><br \>
-            <span>Mark Twain</span>      
-        </div>
-        <div class="main-content">
-            <div id="card-img" class="about-me-img">
-                <div class="img-wrapper"><img src="./assets/about-me.png" alt="My personal photo black and white"></div>
-                <div class="card-icons">
-                    <a target="_blank" href="https://facebook.com"><i class="fab fa-facebook"></i></a>  
-                    <a target="_blank" href="https://www.linkedin.com/in/rodrigo-nascimento-5650b9ba/"><i class="fab fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://github.com/rfn900"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-            <div class="text">
-                <h2>Physicist, Teacher, Web Developer... and a Dancer?</h2>
-                <p>
-                    My background is in natural sciences, more specificly physics, where I was awarded a Ph.D.
-                    in 2008 in the field of Atomic and Molecular Physics. In Physics, I have worked developing
-                    computational solutions for quantum physics problems in
-                    atomic and molecular phyics.</p>
-                <br />
-                <p> These
-                    10 years of experience allowed me to develop a strong problem solving muscle which I take with 
-                    me to every single project I am part of. After moving to Sweden, I decided to dedicate myself to
-                    my other passion in life, which is creating cool stuff for the web. That is why I joined Nackademin's 
-                    Fullstack Development program (<a id="link-for-modal" href="#about-section">read more about it here</a>). 
-                </p> 
-                <button>Download CV</button>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills-section" class="skills">
-        <div class="section-title">
-            <h2>My Skills</h2> 
-        </div>
-
-        <div class="skills-area">
-            <div class="skill-filter-item">
-                <h3>Frontend:</h3>
-                <div class="skills-icons-row">
-                    <p><i class="fab fa-js-square"></i>Javascript</p>
-                    <p><i class="fab fa-html5"></i>Html5</p>
-                    <p><i class="fab fa-css3-alt"></i>CSS3</p>
-                    <p><i class="fab fa-sass"></i>SASS</p>
-                    <p><i class="fab fa-react"></i>React</p>
-                    <p><i class="fab fa-react react-native"></i>React Native</p>
-                </div>
-            </div>
-            <div class="skill-filter-item">
-                <h3>Backend:</h3>
-                <div class="skills-icons-row">
-                    <p><i class="fab fa-node-js"></i>Node.js</p>
-                    <p><i class="fab fa-php"></i>PHP</p>
-                    <p><i class="fab fa-python"></i>Python</p>
-                    <p><img src="./assets/mysql.png" alt="My Sql logo">MySQL</p>
-                    <p><img src="./assets/mongodb.png" alt="Mongodb Logo">MongoDB</p>
-                    <p><img src="./assets/GraphQL_Logo.png" alt="GraphQl
-                    Logo">GraphQl</p>
-                </div>
-            </div>
-            <div class="skill-filter-item">
-                <h3>CMS:</h3>
-                <div class="skills-icons-row">
-                    <p><i class="fab fa-wordpress"></i>Wordpress</p>
-                    <p><i class="fab fa-shopify"></i>Shopify</p>
-                </div>
-            </div>
-            <div class="skill-filter-item">
-                <h3>Tools I Use:</h3>
-                <div class="skills-icons-row">
-                    <p><img src="./assets/photoshop.png" alt="Photoshop logo"><span>Photoshop</span>  </p>
-                    <p><img src="./assets/illustrator.png" alt="Illustrator Logo">Adobe Illustrator</p>
-                    <p><img src="./assets/xd.png" alt="Adobe XD Logo">Adobe XD</p>
-                    <p><img src="./assets/premiere.png" alt="Premiere Pro Logo">Premiere Pro</p>
-                    <p><img src="./assets/aftereffects.png" alt="After Effects Logo">After Effects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="portfolio-section" class="portfolio">
-        <div class="section-title">
-            <h2>Portfolio</h2> 
-        </div>
-        <div class="portfolio-area">
-            <div class="portfolio-item large item-1">
-                <h2>Mr.Storkey Blog</h2>
-
-                <div class="project-tech">
-                    <i class="fab fa-wordpress"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="project-links">
-                    <a target ="_blank" href="https://mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
+                    <label for="toggle-checkbox" class="menulist">
+                    <span></span>
+                </label>
                 </div>
                 
             </div>
-            <div class="portfolio-item small item-2">
-                <h2>Dev Quiz</h2>
+        </nav> 
 
-                <div class="project-tech">
-                    <i class="fab fa-js-square"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
+        <section id="hero-section" class="hero">
+            <div class="hero-text">
+                <div class="hero-pre-title">
+                    <p>Hello, I am a </p>
                 </div>
-                <div class="project-links">
-                    <a target ="_blank" href="https://rfn900.github.io/quiz-project">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a target ="_blank" href="https://github.com/rfn900/quiz-project">
-                        <i class="fab fa-github-alt"></i>
-                    </a>
+                <div class="hero-title">
+                    <h1>Fullstack Developer</h1>
+                </div>
+                <div class="hero-description">
+                    <p>Specialized in</p>
+                        <b>
+                        <div class="inner-text-box">
+                            HTML/CSS<br />
+                            SASS<br />
+                            Javascript<br /> 
+                            Typescript<br /> 
+                            Python<br />
+                            PHP<br />
+                            NodeJS<br />
+                            React<br />
+                            React Native<br />
+                            Wordpress<br />
+                            </div>
+                        </b>
+                </div>
+                <button id="go-to-projects">Check My Projects</button>   
+            </div>
+            
+            
+        </section>
+
+        <section id="about-section" class="about">
+            <div class="section-title">
+                <h2>About Me</h2> 
+            </div>
+            <div class="section-subtitle">
+                <p>I have never let my schooling interfere with my education.</p><br \>
+                <span>Mark Twain</span>      
+            </div>
+            <div class="main-content">
+                <div id="card-img" class="about-me-img">
+                    <div class="img-wrapper"><img src="./assets/about-me.png" alt="My personal photo black and white"></div>
+                    <div class="card-icons">
+                        <a target="_blank" href="https://facebook.com"><i class="fab fa-facebook"></i></a>  
+                        <a target="_blank" href="https://www.linkedin.com/in/rodrigo-nascimento-5650b9ba/"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="https://github.com/rfn900"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="text">
+                    <h2>Physicist, Teacher, Web Developer... and a Dancer?</h2>
+                    <p>
+                        My background is in natural sciences, more specificly physics, where I was awarded a Ph.D.
+                        in 2008 in the field of Atomic and Molecular Physics. In Physics, I have worked developing
+                        computational solutions for quantum physics problems in
+                        atomic and molecular phyics.</p>
+                    <br />
+                    <p> These
+                        10 years of experience allowed me to develop a strong problem solving muscle which I take with 
+                        me to every single project I am part of. After moving to Sweden, I decided to dedicate myself to
+                        my other passion in life, which is creating cool stuff for the web. That is why I joined Nackademin's 
+                        Fullstack Development program (<a id="link-for-modal" href="#about-section">read more about it here</a>). 
+                    </p> 
+                    <button>Download CV</button>
                 </div>
             </div>
-            <div class="portfolio-item small item-3">
-                <h2>Yahtzee</h2>
-
-                <div class="project-tech">
-                    <i class="fab fa-js-square"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="project-links">
-                    <a target ="_blank" href="https://rfn900.github.io/yatzy">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a target ="_blank" href="https://github.com/rfn900/yatzy">
-                        <i class="fab fa-github-alt"></i>
-                    </a>
-                </div>            </div>
-            <div class="portfolio-item large item-5">
-                <h2>Woocommerce Shop</h2>
-
-                <div class="project-tech">
-                    <i class="fab fa-wordpress"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="project-links">
-                    <a target ="_blank" href="https://shop.mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item large-width item-4">
-                <h2>FitnessFia Blog</h2>
-
-                <div class="project-tech">
-                    <i class="fab fa-wordpress"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="project-links">
-                    <a target ="_blank" href="https://fitnessfia.com"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact-me-section" class="contact-me">
-        <div class="section-title">
-            <h2>Contact Me</h2> 
-        </div>
-        <div class="contact-area">
-            <p><i class="far fa-envelope"></i> rfn900@gmail.com</p>
-            <p><i class="fas fa-phone-square-alt"></i> +46 73 871 1353 </p>
-            <p><i class="fas fa-map-marked-alt"></i> Svarvargatan 5, Stockholm 112 49</p>
-        </div>
-    </section>
-    
-
-    <footer><p>All Rights Reserved</p> </footer>
-    <div id="lateral-bar" class="lateral-bar">
-        <div id="lateral-bar-icons" class="lateral-bar-icons collapse">
-            <div><i class="fas fa-file"></i><p>CV</p></div>
-            <div><a target="_blank" href="https://www.linkedin.com/in/rodrigo-nascimento-5650b9ba/"><i class="fab fa-linkedin-in"></i></a></div>
-            <div><a target="_blank" href="https://github.com/rfn900"><i class="fab fa-github-alt"></i></a></div>
-            <div> <a href="mailto:rfn900@gmail.com"><i class="fas fa-envelope"></i></a></div>
-        </div>
-        <div id="collapse-bar" class="collapse-toggle rotate-arrow-toggle"><i class="fas fa-angle-right"></i></div>
-
-    </div>
-
-    <div class="scroll-up-button">
-        <a href="#"><i class="fas fa-chevron-up"></i></i></a>
-    </div>
-
-    <div class="program-description-modal">
-        <div class="modal-content">
-            <h2>The Course at Nackademin</h2>
-            <p>
-                The Fullstack Web Developer program at Nackademin aims at providing its students
-                with the ability to develop applications both in the frontend and backend sides. 
-    
-                In this program, we will learn the fundamentals of frontend web development with HTML5 and CSS3 as well as Javascript. </p> 
-                <br />
-            <p>In addition, we will learn popular libraries and frameworks like ReactJS. 
-    
-                On the backend side, we will learn Node.js and PHP and the two main backend programming languages. On top of that, we will go through database technologies and even Content Management Systems, such as Wordpress. 
-    
-                The program has close ties with several companies in the local job market for web development and is highly focused in preparing its students to the job market. 
-    
-                 Therefore, about half of the program will consist of practical work with its LIA (Lärande I arbete) program. 
-    
-            </p>
-            <span> <a href="#about-section"><i class="fas fa-times-circle"></i></a></span>
-        </div>
+        </section>
         
+        <section id="skills-section" class="skills">
+            <div class="section-title">
+                <h2>My Skills</h2> 
+            </div>
+
+            <div class="skills-area">
+                <div class="skill-filter-item">
+                    <h3>Frontend:</h3>
+                    <div class="skills-icons-row">
+                        <p><i class="fab fa-js-square"></i>Javascript</p>
+                        <p><i class="fab fa-html5"></i>Html5</p>
+                        <p><i class="fab fa-css3-alt"></i>CSS3</p>
+                        <p><i class="fab fa-sass"></i>SASS</p>
+                        <p><i class="fab fa-react"></i>React</p>
+                        <p><i class="fab fa-react react-native"></i>React Native</p>
+                    </div>
+                </div>
+                <div class="skill-filter-item">
+                    <h3>Backend:</h3>
+                    <div class="skills-icons-row">
+                        <p><i class="fab fa-node-js"></i>Node.js</p>
+                        <p><i class="fab fa-php"></i>PHP</p>
+                        <p><i class="fab fa-python"></i>Python</p>
+                        <p><img src="./assets/mysql.png" alt="My Sql logo">MySQL</p>
+                        <p><img src="./assets/mongodb.png" alt="Mongodb Logo">MongoDB</p>
+                        <p><img src="./assets/GraphQL_Logo.png" alt="GraphQl
+                        Logo">GraphQl</p>
+                    </div>
+                </div>
+                <div class="skill-filter-item">
+                    <h3>CMS:</h3>
+                    <div class="skills-icons-row">
+                        <p><i class="fab fa-wordpress"></i>Wordpress</p>
+                        <p><i class="fab fa-shopify"></i>Shopify</p>
+                    </div>
+                </div>
+                <div class="skill-filter-item">
+                    <h3>Tools I Use:</h3>
+                    <div class="skills-icons-row">
+                        <p><img src="./assets/photoshop.png" alt="Photoshop logo"><span>Photoshop</span>  </p>
+                        <p><img src="./assets/illustrator.png" alt="Illustrator Logo">Adobe Illustrator</p>
+                        <p><img src="./assets/xd.png" alt="Adobe XD Logo">Adobe XD</p>
+                        <p><img src="./assets/premiere.png" alt="Premiere Pro Logo">Premiere Pro</p>
+                        <p><img src="./assets/aftereffects.png" alt="After Effects Logo">After Effects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio-section" class="portfolio">
+            <div class="section-title">
+                <h2>Portfolio</h2> 
+            </div>
+            <div class="portfolio-area">
+                <div class="portfolio-item large item-1">
+                    <h2>Mr.Storkey Blog</h2>
+
+                    <div class="project-tech">
+                        <i class="fab fa-wordpress"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="project-links">
+                        <a target ="_blank" href="https://mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="portfolio-item small item-2">
+                    <h2>Dev Quiz</h2>
+
+                    <div class="project-tech">
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="project-links">
+                        <a target ="_blank" href="https://rfn900.github.io/quiz-project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a target ="_blank" href="https://github.com/rfn900/quiz-project">
+                            <i class="fab fa-github-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item small item-3">
+                    <h2>Yahtzee</h2>
+
+                    <div class="project-tech">
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="project-links">
+                        <a target ="_blank" href="https://rfn900.github.io/yatzy">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a target ="_blank" href="https://github.com/rfn900/yatzy">
+                            <i class="fab fa-github-alt"></i>
+                        </a>
+                    </div>            </div>
+                <div class="portfolio-item large item-5">
+                    <h2>Woocommerce Shop</h2>
+
+                    <div class="project-tech">
+                        <i class="fab fa-wordpress"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="project-links">
+                        <a target ="_blank" href="https://shop.mrstorkey.com"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item large-width item-4">
+                    <h2>FitnessFia Blog</h2>
+
+                    <div class="project-tech">
+                        <i class="fab fa-wordpress"></i>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="project-links">
+                        <a target ="_blank" href="https://fitnessfia.com"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-me-section" class="contact-me">
+            <div class="section-title">
+                <h2>Contact Me</h2> 
+            </div>
+            <div class="contact-area">
+                <p><i class="far fa-envelope"></i> rfn900@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +46 73 871 1353 </p>
+                <p><i class="fas fa-map-marked-alt"></i> Svarvargatan 5, Stockholm 112 49</p>
+            </div>
+        </section>
+        
+
+        <footer><p>All Rights Reserved</p> </footer>
+        <div id="lateral-bar" class="lateral-bar">
+            <div id="lateral-bar-icons" class="lateral-bar-icons collapse">
+                <div><i class="fas fa-file"></i><p>CV</p></div>
+                <div><a target="_blank" href="https://www.linkedin.com/in/rodrigo-nascimento-5650b9ba/"><i class="fab fa-linkedin-in"></i></a></div>
+                <div><a target="_blank" href="https://github.com/rfn900"><i class="fab fa-github-alt"></i></a></div>
+                <div> <a href="mailto:rfn900@gmail.com"><i class="fas fa-envelope"></i></a></div>
+            </div>
+            <div id="collapse-bar" class="collapse-toggle rotate-arrow-toggle"><i class="fas fa-angle-right"></i></div>
+
+        </div>
+
+        <div class="scroll-up-button">
+            <a href="#"><i class="fas fa-chevron-up"></i></i></a>
+        </div>
+
+        <div class="program-description-modal">
+            <div class="modal-content">
+                <h2>The Course at Nackademin</h2>
+                <p>
+                    The Fullstack Web Developer program at Nackademin aims at providing its students
+                    with the ability to develop applications both in the frontend and backend sides. 
+        
+                    In this program, we will learn the fundamentals of frontend web development with HTML5 and CSS3 as well as Javascript. </p> 
+                    <br />
+                <p>In addition, we will learn popular libraries and frameworks like ReactJS. 
+        
+                    On the backend side, we will learn Node.js and PHP and the two main backend programming languages. On top of that, we will go through database technologies and even Content Management Systems, such as Wordpress. 
+        
+                    The program has close ties with several companies in the local job market for web development and is highly focused in preparing its students to the job market. 
+        
+                     Therefore, about half of the program will consist of practical work with its LIA (Lärande I arbete) program. 
+        
+                </p>
+                <span> <a href="#about-section"><i class="fas fa-times-circle"></i></a></span>
+            </div>
+            
+        </div>
     </div>
-</div>
     
+    <script src="https://kit.fontawesome.com/15d187da22.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
 </body>
 </html>
