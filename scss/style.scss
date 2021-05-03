@@ -17,16 +17,13 @@ html {
 body{
     position: relative;
     z-index: -1;
+    width: 100vw;
 }
 
 .super-wrapper{
     z-index: -999;
     position: relative;
     overflow-x: hidden;
-}
-
-body{
-    width: 100vw;
 }
 
 * {
@@ -43,8 +40,11 @@ a{
 
 h1,h2,h3,h4,h5,h6 {
     font-family: $font-primary;
+    color: #222222;
 }
-
+p{
+    color: #777777;
+}
 .menu-toggle{
     display: none;
 }
@@ -302,7 +302,6 @@ section:nth-of-type(2n+3){
         display: flex;
         flex-direction: column;
         width: 100%;
-        color: white;
         font-size: 16px;
         & * {
             margin-bottom: 0.4em;
@@ -311,10 +310,16 @@ section:nth-of-type(2n+3){
         .hero-pre-title{
             font-weight: 300;
             font-size: 1.75em;
+            p{
+                color: white;
+            }
         }
 
         .hero-title{
             font-size: 2.75em;
+            h1{
+                color: white;
+            }
         }
 
         .hero-description{
@@ -327,6 +332,7 @@ section:nth-of-type(2n+3){
                 float: left;
                 margin-right: 0.15em;
                 line-height: 0.9em;
+                color: white;
             }
 
             b{
@@ -511,7 +517,7 @@ section:nth-of-type(2n+3){
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         position: relative;
         .text {
@@ -519,24 +525,23 @@ section:nth-of-type(2n+3){
             margin-left: 0.5rem;
             width: 50%;
             font-size: 1rem;   
-            text-align: justify;
             line-height: 1.5;
             transform: translateX(+550%);
             transition: transform 500ms 750ms ease-out;    
             
             h2{
                 position: relative;
-                margin: 0;
+                margin: 0 0 30px 0;
 
             }
 
             p {         
                 margin-top: 0.5rem;
-                font-size: 1.25rem;
+                font-size: 1.1rem;
             }
            
             button{
-                margin-top: 1.25rem;
+                margin-top: 40px;
                 padding: 0.75em 1.75rem;
                 border-radius: 5px;
                 border: 4px solid $color-accent;
@@ -544,7 +549,7 @@ section:nth-of-type(2n+3){
                 font-weight: 700;
                 box-shadow: 0 10px 60px 20px rgb(255,255,255, 0.1);
                 background-color: $color-accent;
-                color: $text-color;
+                color: white;
                 cursor: pointer;
                 transition: all 350ms ease-in-out;
 
@@ -693,9 +698,6 @@ section:nth-of-type(2n+3){
                     }
                     .fa-react{
                         color: #61DBFB;
-                    }
-                    .fa-angular{
-                        color: #dd1b16;
                     }
                     .fa-sass{
                         color: #c69;
@@ -927,7 +929,7 @@ section:nth-of-type(2n+3){
     left: 20px;
     border-radius: 10px;
     font-size: 2.5rem;
-    color: $text-color;
+    color: white!important;
     z-index: 99;
     opacity: 0;
     visibility:hidden;

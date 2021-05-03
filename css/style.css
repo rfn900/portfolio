@@ -9,16 +9,13 @@ html {
 body {
   position: relative;
   z-index: -1;
+  width: 100vw;
 }
 
 .super-wrapper {
   z-index: -999;
   position: relative;
   overflow-x: hidden;
-}
-
-body {
-  width: 100vw;
 }
 
 * {
@@ -35,6 +32,11 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
+  color: #222222;
+}
+
+p {
+  color: #777777;
 }
 
 .menu-toggle {
@@ -250,7 +252,6 @@ section:nth-of-type(2n+3) {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: white;
   font-size: 16px;
 }
 .hero .hero-text * {
@@ -260,8 +261,14 @@ section:nth-of-type(2n+3) {
   font-weight: 300;
   font-size: 1.75em;
 }
+.hero .hero-text .hero-pre-title p {
+  color: white;
+}
 .hero .hero-text .hero-title {
   font-size: 2.75em;
+}
+.hero .hero-text .hero-title h1 {
+  color: white;
 }
 .hero .hero-text .hero-description {
   align-items: center;
@@ -273,6 +280,7 @@ section:nth-of-type(2n+3) {
   float: left;
   margin-right: 0.15em;
   line-height: 0.9em;
+  color: white;
 }
 .hero .hero-text .hero-description b {
   float: left;
@@ -479,7 +487,7 @@ section:nth-of-type(2n+3) {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
@@ -488,21 +496,20 @@ section:nth-of-type(2n+3) {
   margin-left: 0.5rem;
   width: 50%;
   font-size: 1rem;
-  text-align: justify;
   line-height: 1.5;
   transform: translateX(550%);
   transition: transform 500ms 750ms ease-out;
 }
 .about .main-content .text h2 {
   position: relative;
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 .about .main-content .text p {
   margin-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 .about .main-content .text button {
-  margin-top: 1.25rem;
+  margin-top: 40px;
   padding: 0.75em 1.75rem;
   border-radius: 5px;
   border: 4px solid #F6B21B;
@@ -510,7 +517,7 @@ section:nth-of-type(2n+3) {
   font-weight: 700;
   box-shadow: 0 10px 60px 20px rgba(255, 255, 255, 0.1);
   background-color: #F6B21B;
-  color: #161616;
+  color: white;
   cursor: pointer;
   transition: all 350ms ease-in-out;
 }
@@ -634,9 +641,6 @@ section:nth-of-type(2n+3) {
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p .fa-react {
   color: #61DBFB;
-}
-.skills .skills-area .skill-filter-item .skills-icons-row p .fa-angular {
-  color: #dd1b16;
 }
 .skills .skills-area .skill-filter-item .skills-icons-row p .fa-sass {
   color: #c69;
@@ -834,7 +838,7 @@ section:nth-of-type(2n+3) {
   left: 20px;
   border-radius: 10px;
   font-size: 2.5rem;
-  color: #161616;
+  color: white !important;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
