@@ -973,6 +973,11 @@ footer {
 }
 .program-description-modal .modal-content p {
   text-align: justify;
+  margin-bottom: 40px;
+}
+.program-description-modal .modal-content p a {
+  text-align: left;
+  text-decoration: underline;
 }
 .program-description-modal .modal-content span {
   position: absolute;
