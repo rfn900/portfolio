@@ -684,7 +684,7 @@ section:nth-of-type(2n+3) {
   display: grid;
   min-height: 80vh;
   min-width: 60vw;
-  grid-template-rows: repeat(3, minmax(10em, 1fr));
+  grid-template-rows: repeat(6, minmax(10em, 1fr));
   grid-template-columns: repeat(4, minmax(10em, 1fr));
   grid-gap: 20px;
   margin-top: 2rem;
@@ -731,6 +731,8 @@ section:nth-of-type(2n+3) {
   transform: scale(1.2);
 }
 .portfolio .portfolio-area .portfolio-item .project-tech {
+  display: flex;
+  align-items: flex-end;
   position: absolute;
   bottom: 15px;
   left: 15px;
@@ -750,6 +752,9 @@ section:nth-of-type(2n+3) {
 }
 .portfolio .portfolio-area .portfolio-item .project-tech .fa-js-square {
   color: #FFDB5C;
+}
+.portfolio .portfolio-area .portfolio-item .project-tech img {
+  height: 20px;
 }
 .portfolio .portfolio-area .portfolio-item.large {
   grid-row: span 2;
@@ -799,7 +804,7 @@ section:nth-of-type(2n+3) {
 }
 .portfolio .portfolio-area .portfolio-item.item-5 {
   position: relative;
-  background: url("../assets/shop-mrstorkey.png") no-repeat;
+  background: url("../assets/slack-clone-img.png") no-repeat;
   background-size: contain;
   background-position: center;
   background-color: #fafafa;
