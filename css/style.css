@@ -776,7 +776,7 @@ section:nth-of-type(2n+3) {
 }
 .portfolio .portfolio-area .portfolio-item.item-1 {
   position: relative;
-  background: url("../assets/mrstorkey-screen.png") no-repeat;
+  background: url("../assets/slack-clone-img.png") no-repeat;
   background-size: contain;
   background-position: center;
   background-color: #fafafa;
@@ -797,14 +797,17 @@ section:nth-of-type(2n+3) {
 }
 .portfolio .portfolio-area .portfolio-item.item-4 {
   position: relative;
-  background: url("../assets/fintessfia.png") no-repeat;
+  background: url("../assets/fitnessfia.png") no-repeat;
   background-size: contain;
   background-position: center;
   background-color: #fafafa;
 }
+.portfolio .portfolio-area .portfolio-item.item-4 img {
+  height: 25px;
+}
 .portfolio .portfolio-area .portfolio-item.item-5 {
   position: relative;
-  background: url("../assets/slack-clone-img.png") no-repeat;
+  background: url("../assets/mrstorkey-screen.png") no-repeat;
   background-size: contain;
   background-position: center;
   background-color: #fafafa;
