@@ -252,6 +252,7 @@ section:nth-of-type(2n+3){
                 a {
                     color: white;
                     font-weight: 300;
+                    cursor: pointer;
                 }
              
             }
@@ -956,7 +957,7 @@ section:nth-of-type(2n+3){
         top: 3%;
         left: 50%;
         transform: translateX(-50%);
-        
+        cursor:pointer;
     }
 }
 
